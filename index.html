@@ -601,6 +601,32 @@
     color: var(--tag-ink);
   }
  
+  /* In-progress / planned credentials — clearly distinct from earned */
+  .cert-badge.progress {
+    background: transparent;
+    color: var(--muted);
+    border: 1px dashed var(--muted);
+  }
+ 
+  .cert-card.pursuing {
+    border-style: dashed;
+    background: transparent;
+  }
+ 
+  .cert-card.pursuing .cert-icon {
+    background: rgba(0,0,0,0.04);
+  }
+ 
+  .certs-subhead {
+    grid-column: 1 / -1;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 1.25rem 0 0.25rem;
+  }
+ 
   /* ── CONTACT ── */
   .contact-section {
     background: var(--ink);
@@ -935,7 +961,7 @@
 <section id="certifications">
   <div class="section-label">Credentials</div>
   <h2 class="section-title">Certifications</h2>
-  <p class="section-sub">Verified credentials across data science, healthcare informatics, and development.</p>
+  <p class="section-sub">Verified credentials across data science, healthcare finance, and development — plus credentials currently in progress.</p>
   <div class="certs-grid">
     <a href="https://www.coursera.org/account/accomplishments/certificate/S3MDFVXLBKYS" target="_blank" class="cert-card">
       <div class="cert-icon">📊</div>
@@ -961,22 +987,6 @@
       </div>
       <span class="cert-badge active">Verified</span>
     </a>
-    <div class="cert-card" style="cursor:default">
-      <div class="cert-icon">📈</div>
-      <div>
-        <div class="cert-name">Power BI Data Analyst (PL-300)</div>
-        <div class="cert-issuer">Microsoft</div>
-      </div>
-      <span class="cert-badge">2026</span>
-    </div>
-    <div class="cert-card" style="cursor:default">
-      <div class="cert-icon">🏥</div>
-      <div>
-        <div class="cert-name">CHDA — Certified Health Data Analyst</div>
-        <div class="cert-issuer">AHIMA</div>
-      </div>
-      <span class="cert-badge">2026</span>
-    </div>
     <a href="https://learn.hfma.org/pluginfile.php/1/tool_certificate/issues/1780369610/3315685316NB.pdf" target="_blank" class="cert-card">
       <div class="cert-icon">💵</div>
       <div>
@@ -985,6 +995,33 @@
       </div>
       <span class="cert-badge active">Verified</span>
     </a>
+ 
+    <div class="certs-subhead">Currently Pursuing</div>
+ 
+    <div class="cert-card pursuing" style="cursor:default">
+      <div class="cert-icon">📈</div>
+      <div>
+        <div class="cert-name">Power BI Data Analyst (PL-300)</div>
+        <div class="cert-issuer">Microsoft</div>
+      </div>
+      <span class="cert-badge progress">In Progress</span>
+    </div>
+    <div class="cert-card pursuing" style="cursor:default">
+      <div class="cert-icon">🏥</div>
+      <div>
+        <div class="cert-name">CHDA — Certified Health Data Analyst</div>
+        <div class="cert-issuer">AHIMA</div>
+      </div>
+      <span class="cert-badge progress">In Progress</span>
+    </div>
+    <div class="cert-card pursuing" style="cursor:default">
+      <div class="cert-icon">🩺</div>
+      <div>
+        <div class="cert-name">CAHIMS — Certified Associate in Healthcare Information &amp; Management Systems</div>
+        <div class="cert-issuer">HIMSS</div>
+      </div>
+      <span class="cert-badge progress">Planned</span>
+    </div>
   </div>
 </section>
  
